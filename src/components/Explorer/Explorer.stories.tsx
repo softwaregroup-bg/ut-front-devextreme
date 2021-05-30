@@ -36,11 +36,11 @@ export const Basic: React.FC<{}> = () => <Wrap state={state}>
             fields={[{
                 field: 'name',
                 title: 'Name',
-                filterable: true
+                filter: true
             }, {
                 field: 'size',
                 title: 'Size',
-                filterable: true
+                filter: true
             }]}
             details={{
                 name: 'Name'

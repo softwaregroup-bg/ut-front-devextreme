@@ -67,7 +67,16 @@ const Explorer: StyledType = ({
         }</div>;
     const [navigationOpened, navigationToggle] = useToggle(true);
     const [detailsOpened, detailsToggle] = useToggle(true);
-    const InputTextField = (field, title) => <InputText type="text" value={filterData[field]} onChange={(e) => { const value = e.target.value; setFilters((prev) => ({...prev, [field]: value})); }} placeholder={`Search by ${title}`}/>;
+    const InputTextField = (field, title) =>
+        <InputText
+            type="text"
+            value={filterData[field]}
+            onChange={event => {
+                const value = event.target.value;
+                setFilters(prev => ({...prev, [field]: value}));
+            }}
+            placeholder={`Filter by ${title}`}
+        />;
     return (
         <div className={clsx('p-d-flex', 'p-flex-column', className)} style={{height: '100%'}} >
             <Toolbar
@@ -98,7 +107,7 @@ const Explorer: StyledType = ({
                             onRowSelect={e => setCurrent(e.data)}
                         >
                             <Column selectionMode="multiple" style={{width: '3em'}}/>
-                            {fields.map(({field, title, filterable, action}) => <Column
+                            {fields.map(({field, title, filter, action}) => <Column
                                 key={field}
                                 field={field}
                                 header={title}
@@ -112,7 +121,7 @@ const Explorer: StyledType = ({
                                         selected: [row]
                                     })}
                                 />)}
-                                filter={filterable}
+                                filter={!!filter}
                                 filterElement={InputTextField(field, title)}
                             />)}
                         </DataTable>
