@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Editor /> render equals snapshot 1`] = `
+<div
+  data-testid="ut-front-test"
+>
+  <div>
+    <form
+      class="p-grid p-m-2"
+    />
+  </div>
+</div>
+`;
