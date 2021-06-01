@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import Joi from 'joi';
 
-import { Card, InputText, Dropdown, InputMask, InputNumber, Calendar } from '../prime';
+import { Card, InputText, DataTable, Column, Dropdown, InputMask, InputNumber, Calendar } from '../prime';
 import { Styled, StyledType } from './Editor.types';
 import useForm from '../hooks/useForm';
 import Controller from '../Controller';
@@ -20,13 +20,44 @@ function Currency({onChange, ref, ...props}) {
         />
     );
 }
+function Table({columns, items, ...props}) {
+    const [data, setData] = React.useState([...items]);
+    const dataTableFuncMap = {
+        data: setData
+    };
 
+    const onEditorValueChange = (stateKey, props, value) => {
+        const updatedValue = [...props.value];
+        updatedValue[props.rowIndex][props.field] = value;
+        dataTableFuncMap[stateKey](updatedValue);
+    };
+    const inputTextEditor = (stateKey, props, field) => {
+        return <InputText
+            type="text"
+            value={props.rowData[field]}
+            onChange={(event) => onEditorValueChange(stateKey, props, event.target.value)}
+            id={`${props.rowData.id}`}
+        />;
+    };
+    return (
+        <DataTable value={data} editMode="cell" className="editable-cells-table">
+            {(columns || []).map(({ field, header }) => <Column
+                key={field}
+                field={field}
+                header={header}
+                editor={(props) => inputTextEditor('data', props, field)}
+            ></Column>
+            )}
+        </DataTable>
+    );
+}
 function element(field, {type = 'string', ...props} = {}) {
     const Element: React.ElementType = {
         dropdown: Dropdown,
         mask: InputMask,
         date: Calendar,
-        currency: Currency
+        currency: Currency,
+        table: Table
     }[type] || InputText;
     return <Element {...field} {...props}/>;
 }
