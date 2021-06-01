@@ -20,12 +20,12 @@ function Currency({onChange, ref, ...props}) {
         />
     );
 }
-function Table({columns, items, ...props}) {
+function Table({onChange, columns, items, ...props}) {
     const [data, setData] = React.useState([...items]);
     const dataTableFuncMap = {
         data: setData
     };
-
+    React.useEffect(() => { onChange?.(JSON.stringify(data)); }, [data]);
     const onEditorValueChange = (stateKey, props, value) => {
         const updatedValue = [...props.value];
         updatedValue[props.rowIndex][props.field] = value;
