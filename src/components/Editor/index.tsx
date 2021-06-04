@@ -22,29 +22,27 @@ function Currency({onChange, ref, ...props}) {
     );
 }
 function Table({onChange, columns, value, dataKey = 'id'}) {
-    const onEditorValueChange = (props, value) => {
-        const updatedValue = [...props.value];
-        updatedValue[props.rowIndex][props.field] = value;
-        onChange(updatedValue);
-    };
-    const inputTextEditor = (props, field) => {
-        return <InputText
-            type="text"
-            value={props.rowData[field]}
-            onChange={(event) => onEditorValueChange(props, event.target.value)}
-            id={`${props.rowData.id}`}
-        />;
-    };
+    const cellEditor = React.useCallback((props, field) => <InputText
+        type="text"
+        value={props.rowData[field]}
+        onChange={({target: {value}}) => {
+            const updatedValue = [...props.value];
+            updatedValue[props.rowIndex][props.field] = value;
+            onChange(updatedValue);
+        }}
+        id={`${props.rowData.id}`}
+    />, [onChange]);
     const [original, setOriginal] = React.useState({index: null, value: null});
 
-    function init({index}) {
+    const init = React.useCallback(({index}) => {
         setOriginal({index, value: {...value[index]}});
-    }
-    function cancel() {
+    }, [value, setOriginal]);
+
+    const cancel = React.useCallback(() => {
         const restored = [...value];
         restored[original.index] = original.value;
         onChange(restored);
-    }
+    }, [value, onChange]);
 
     return (
         <DataTable
@@ -60,7 +58,7 @@ function Table({onChange, columns, value, dataKey = 'id'}) {
                     key={field}
                     field={field}
                     header={header}
-                    editor={(props) => inputTextEditor(props, field)}
+                    editor={props => cellEditor(props, field)}
                 />)
             }
             <Column rowEditor headerStyle={{ width: '7rem' }} bodyStyle={{ textAlign: 'center' }}></Column>
