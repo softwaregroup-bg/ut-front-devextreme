@@ -19,128 +19,18 @@ export default {
 const state = {
 };
 
-const tabledata = [
-    {
-        id: '1000',
-        code: 'f230fh0g3',
-        name: 'Bamboo Watch',
-        description: 'Product Description',
-        image: 'bamboo-watch.jpg',
-        price: 65,
-        category: 'Accessories',
-        quantity: 24,
-        inventoryStatus: 'INSTOCK',
-        rating: 5
-    },
-    {
-        id: '1001',
-        code: 'nvklal433',
-        name: 'Black Watch',
-        description: 'Product Description',
-        image: 'black-watch.jpg',
-        price: 72,
-        category: 'Accessories',
-        quantity: 61,
-        inventoryStatus: 'INSTOCK',
-        rating: 4
-    },
-    {
-        id: '1002',
-        code: 'zz21cz3c1',
-        name: 'Blue Band',
-        description: 'Product Description',
-        image: 'blue-band.jpg',
-        price: 79,
-        category: 'Fitness',
-        quantity: 2,
-        inventoryStatus: 'LOWSTOCK',
-        rating: 3
-    },
-    {
-        id: '1003',
-        code: '244wgerg2',
-        name: 'Blue T-Shirt',
-        description: 'Product Description',
-        image: 'blue-t-shirt.jpg',
-        price: 29,
-        category: 'Clothing',
-        quantity: 25,
-        inventoryStatus: 'INSTOCK',
-        rating: 5
-    },
-    {
-        id: '1004',
-        code: 'h456wer53',
-        name: 'Bracelet',
-        description: 'Product Description',
-        image: 'bracelet.jpg',
-        price: 15,
-        category: 'Accessories',
-        quantity: 73,
-        inventoryStatus: 'INSTOCK',
-        rating: 4
-    },
-    {
-        id: '1005',
-        code: 'av2231fwg',
-        name: 'Brown Purse',
-        description: 'Product Description',
-        image: 'brown-purse.jpg',
-        price: 120,
-        category: 'Accessories',
-        quantity: 0,
-        inventoryStatus: 'OUTOFSTOCK',
-        rating: 4
-    },
-    {
-        id: '1006',
-        code: 'bib36pfvm',
-        name: 'Chakra Bracelet',
-        description: 'Product Description',
-        image: 'chakra-bracelet.jpg',
-        price: 32,
-        category: 'Accessories',
-        quantity: 5,
-        inventoryStatus: 'LOWSTOCK',
-        rating: 3
-    },
-    {
-        id: '1007',
-        code: 'mbvjkgip5',
-        name: 'Galaxy Earrings',
-        description: 'Product Description',
-        image: 'galaxy-earrings.jpg',
-        price: 34,
-        category: 'Accessories',
-        quantity: 23,
-        inventoryStatus: 'INSTOCK',
-        rating: 5
-    },
-    {
-        id: '1008',
-        code: 'vbb124btr',
-        name: 'Game Controller',
-        description: 'Product Description',
-        image: 'game-controller.jpg',
-        price: 99,
-        category: 'Electronics',
-        quantity: 2,
-        inventoryStatus: 'LOWSTOCK',
-        rating: 4
-    },
-    {
-        id: '1009',
-        code: 'cm230f032',
-        name: 'Gaming Set',
-        description: 'Product Description',
-        image: 'gaming-set.jpg',
-        price: 299,
-        category: 'Electronics',
-        quantity: 63,
-        inventoryStatus: 'INSTOCK',
-        rating: 3
-    }
-];
+const data = {
+    identifierType: 1,
+    identifier: 'id-123',
+    phone: [
+        {type: 'home', countryCode: '+359', phoneNumber: '123'},
+        {type: 'work', countryCode: '+359', phoneNumber: '456'}
+    ],
+    email: [
+        {type: 'home', emailAddress: 'name@example.com'},
+        {type: 'work', emailAddress: 'office@example.com'}
+    ]
+};
 
 const index = [{
     icon: 'pi pi-user',
@@ -185,15 +75,20 @@ const currencyEditor = {
     ]
 };
 
-const tableDataEditor = {
+const phoneEditor = {
     type: 'table',
-    // mask: '99/99/9999',
     columns: [
-        { field: 'code', header: 'Code' },
-        { field: 'name', header: 'Name' },
-        { field: 'quantity', header: 'Quantity' },
-        { field: 'price', header: 'Price' },
-        { field: 'description', header: 'Description' }
+        { field: 'type', header: 'Type' },
+        { field: 'countryCode', header: 'Country code' },
+        { field: 'phoneNumber', header: 'Number' }
+    ]
+};
+
+const emailEditor = {
+    type: 'table',
+    columns: [
+        { field: 'type', header: 'Type' },
+        { field: 'emailAddress', header: 'Email address' }
     ]
 };
 
@@ -228,14 +123,10 @@ const fields = [
     {card: 'address', name: 'addressCity', title: 'City'},
     {card: 'address', name: 'addressZip', title: 'Post code'},
     {card: 'address', name: 'addressStreet', title: 'Street'},
-    {card: 'phone', name: 'phoneType', title: 'Type'},
-    {card: 'phone', name: 'phoneCountry', title: 'Country'},
-    {card: 'phone', name: 'phoneNumber', title: 'Phone number'},
-    {card: 'email', name: 'emailType', title: 'Type'},
-    {card: 'email', name: 'emailAddress', title: 'Email address'},
+    {card: 'phone', name: 'phone', title: 'Phone', editor: phoneEditor, validation: Joi.any()},
+    {card: 'email', name: 'email', title: 'Email', editor: emailEditor, validation: Joi.any()},
     {card: 'person', name: 'personName', title: 'Name'},
-    {card: 'person', name: 'personPosition', title: 'Position'},
-    {card: 'table', name: 'editableDataTable', title: 'Table name', editor: tableDataEditor}
+    {card: 'person', name: 'personPosition', title: 'Position'}
 ];
 
 const cards = [
@@ -253,6 +144,12 @@ export const Basic: React.FC<{}> = () => {
     const [filter, setFilter] = React.useState(index?.[0]?.items?.[0].filter || []);
     const toast = React.useRef(null);
     const trigger = React.useRef(null);
+    const get = React.useCallback(() => Promise.resolve(data), [data]);
+    const submit = React.useCallback(formData => toast.current.show({
+        severity: 'success',
+        summary: 'Submit',
+        detail: <pre>{JSON.stringify(formData, null, 2)}</pre>
+    }), [toast]);
     return (
         <Wrap state={state}>
             <Toast ref={toast} />
@@ -262,13 +159,9 @@ export const Basic: React.FC<{}> = () => {
                     style={{flexGrow: 3, overflowY: 'auto', height: '100%'}}
                     fields={fields}
                     cards={cards.filter(({id}) => filter && filter.includes(id))}
-                    onSubmit={formData => toast.current.show({
-                        severity: 'success',
-                        summary: 'Submit',
-                        detail: <pre>{JSON.stringify(formData, null, 2)}</pre>
-                    })}
+                    onSubmit={submit}
                     trigger={trigger}
-                    get={() => Promise.resolve(tabledata)}
+                    get={get}
                 />
             </ThumbIndex>
         </Wrap>

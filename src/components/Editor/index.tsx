@@ -21,34 +21,49 @@ function Currency({onChange, ref, ...props}) {
         />
     );
 }
-function Table({onChange, columns, value, ...props}) {
-    const [data, setData] = React.useState(value.map(i => ({...i})));
-    const dataTableFuncMap = {
-        data: setData
-    };
-    React.useEffect(() => { onChange?.(JSON.stringify(data)); }, [data]);
-    const onEditorValueChange = (stateKey, props, value) => {
+function Table({onChange, columns, value, dataKey = 'id'}) {
+    const onEditorValueChange = (props, value) => {
         const updatedValue = [...props.value];
         updatedValue[props.rowIndex][props.field] = value;
-        dataTableFuncMap[stateKey](updatedValue);
+        onChange(updatedValue);
     };
-    const inputTextEditor = (stateKey, props, field) => {
+    const inputTextEditor = (props, field) => {
         return <InputText
             type="text"
             value={props.rowData[field]}
-            onChange={(event) => onEditorValueChange(stateKey, props, event.target.value)}
+            onChange={(event) => onEditorValueChange(props, event.target.value)}
             id={`${props.rowData.id}`}
         />;
     };
+    const [original, setOriginal] = React.useState({index: null, value: null});
+
+    function init({index}) {
+        setOriginal({index, value: {...value[index]}});
+    }
+    function cancel() {
+        const restored = [...value];
+        restored[original.index] = original.value;
+        onChange(restored);
+    }
+
     return (
-        <DataTable value={data} editMode="cell" className="editable-cells-table">
-            {(columns || []).map(({ field, header }) => <Column
-                key={field}
-                field={field}
-                header={header}
-                editor={(props) => inputTextEditor('data', props, field)}
-            ></Column>
-            )}
+        <DataTable
+            value={value}
+            editMode="row"
+            dataKey={dataKey}
+            className="editable-cells-table"
+            onRowEditInit={init}
+            onRowEditCancel={cancel}
+        >
+            {
+                (columns || []).map(({ field, header }) => <Column
+                    key={field}
+                    field={field}
+                    header={header}
+                    editor={(props) => inputTextEditor(props, field)}
+                />)
+            }
+            <Column rowEditor headerStyle={{ width: '7rem' }} bodyStyle={{ textAlign: 'center' }}></Column>
         </DataTable>
     );
 }
@@ -76,7 +91,7 @@ const Editor: StyledType = ({ classes, className, fields, cards, onSubmit, trigg
         if (trigger) trigger.current = handleSubmit(onSubmit);
     }, [trigger, handleSubmit, onSubmit]);
     React.useEffect(() => {
-        (async() => reset(get ? await get() : []))();
+        (async() => reset(get ? await get() : {}))();
     }, [get]);
     return (
         <div {...rest}>
