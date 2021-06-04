@@ -7,6 +7,7 @@ import { Styled, StyledType } from './Editor.types';
 import useForm from '../hooks/useForm';
 import Controller from '../Controller';
 import { joiResolver } from '@hookform/resolvers/joi';
+import { RefCallBack } from 'react-hook-form';
 
 function Currency({onChange, ref, ...props}) {
     return (
@@ -20,8 +21,8 @@ function Currency({onChange, ref, ...props}) {
         />
     );
 }
-function Table({onChange, columns, items, ...props}) {
-    const [data, setData] = React.useState([...items]);
+function Table({onChange, columns, value, ...props}) {
+    const [data, setData] = React.useState(value.map(i => ({...i})));
     const dataTableFuncMap = {
         data: setData
     };
@@ -51,7 +52,7 @@ function Table({onChange, columns, items, ...props}) {
         </DataTable>
     );
 }
-function element(field, {type = 'string', ...props} = {}) {
+function element(field: { onChange: (...event: any[]) => void; onBlur: () => void; value: any; name: string; ref: RefCallBack; className: string; }, {type = 'string', ...props} = {}) {
     const Element: React.ElementType = {
         dropdown: Dropdown,
         mask: InputMask,
@@ -62,18 +63,21 @@ function element(field, {type = 'string', ...props} = {}) {
     return <Element {...field} {...props}/>;
 }
 
-const Editor: StyledType = ({ classes, className, fields, cards, onSubmit, trigger, ...rest }) => {
+const Editor: StyledType = ({ classes, className, fields, cards, onSubmit, trigger, get, ...rest }) => {
     const schema = fields.reduce(
         (schema, {name, title, validation = Joi.string().allow('')}) => schema.append({[name]: validation.label(title)}),
         Joi.object()
     );
-    const {handleSubmit, control, formState: {errors}} = useForm({resolver: joiResolver(schema)});
+    const {handleSubmit, reset, control, formState: {errors}} = useForm({resolver: joiResolver(schema)});
     const getFormErrorMessage = (name) => {
         return errors[name] && <small className="p-error">{errors[name].message}</small>;
     };
     React.useEffect(() => {
         if (trigger) trigger.current = handleSubmit(onSubmit);
     }, [trigger, handleSubmit, onSubmit]);
+    React.useEffect(() => {
+        (async() => reset(get ? await get() : []))();
+    }, [get]);
     return (
         <div {...rest}>
             <form onSubmit={handleSubmit(onSubmit)} className="p-grid p-m-2">
