@@ -72,9 +72,8 @@ const Explorer: StyledType = ({
             }
         };
         return (
-            <Permission permission={permission}>
+            <Permission key={index} permission={permission}>
                 <Button
-                    key={index}
                     label={title}
                     onClick={() => action({
                         id: current && current[keyField],
@@ -224,15 +223,19 @@ const Explorer: StyledType = ({
     return (
         <div className={clsx('flex', 'flex-column', className)} style={{height: '100%'}} >
             {buttons?.length && <Toolbar left={left} right={right} style={backgroundNone} />}
-            <Splitter style={flexGrow}>
-                {[
-                    nav,
-                    <SplitterPanel key='items' size={nav ? detailsPanel ? 75 : 85 : detailsPanel ? 90 : 100}>
-                        {table}
-                    </SplitterPanel>,
-                    detailsPanel
-                ].filter(Boolean)}
-            </Splitter>
+            {
+                (nav || detailsPanel)
+                    ? <Splitter style={flexGrow}>
+                        {[
+                            nav,
+                            <SplitterPanel key='items' size={nav ? detailsPanel ? 75 : 85 : 90}>
+                                {table}
+                            </SplitterPanel>,
+                            detailsPanel
+                        ].filter(Boolean)}
+                    </Splitter>
+                    : table
+            }
         </div>
     );
 };
