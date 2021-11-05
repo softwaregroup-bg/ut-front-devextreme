@@ -195,7 +195,7 @@ const Explorer: StyledType = ({
         {hasChildren && <Button icon="pi pi-bars" className="mr-2" onClick={navigationToggle}/>}
         {buttons}
     </>, [navigationToggle, buttons, hasChildren]);
-    const right = React.useMemo(() => <Button icon="pi pi-bars" className="mr-2" onClick={detailsToggle}/>, [detailsToggle]);
+    const right = React.useMemo(() => details && <Button icon="pi pi-bars" className="mr-2" onClick={detailsToggle}/>, [detailsToggle]);
 
     const table = <DataTable
         autoLayout
