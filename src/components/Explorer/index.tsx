@@ -220,20 +220,19 @@ const Explorer: StyledType = ({
         {keyField && <Column selectionMode="multiple" style={selectionWidth}/>}
         {Columns}
     </DataTable>;
+    const nav = children && navigationOpened && <SplitterPanel key='nav' size={15}>{children}</SplitterPanel>;
     return (
         <div className={clsx('flex', 'flex-column', className)} style={{height: '100%'}} >
-            {(detailsPanel || children || buttons?.length) ? <>
-                <Toolbar left={left} right={right} style={backgroundNone} />
-                <Splitter style={flexGrow}>
-                    {[
-                        children && navigationOpened && <SplitterPanel key='nav' size={15}>{children}</SplitterPanel>,
-                        <SplitterPanel key='items' size={75}>
-                            {table}
-                        </SplitterPanel>,
-                        detailsPanel
-                    ].filter(Boolean)}
-                </Splitter>
-            </> : table}
+            {buttons?.length && <Toolbar left={left} right={right} style={backgroundNone} />}
+            <Splitter style={flexGrow}>
+                {[
+                    nav,
+                    <SplitterPanel key='items' size={nav ? detailsPanel ? 75 : 85 : detailsPanel ? 90 : 100}>
+                        {table}
+                    </SplitterPanel>,
+                    detailsPanel
+                ].filter(Boolean)}
+            </Splitter>
         </div>
     );
 };
