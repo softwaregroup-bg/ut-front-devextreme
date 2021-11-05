@@ -62,16 +62,16 @@ const Template: Story<{
                     filter={{}}
                     actions={[{
                         title: 'Create',
-                        ...createPermission && {permission: createPermission},
+                        permission: createPermission,
                         action: () => {}
                     }, {
                         title: 'Edit',
-                        ...editPermission && {permission: editPermission},
+                        permission: editPermission,
                         enabled: 'current',
                         action: show('edit')
                     }, {
                         title: 'Delete',
-                        ...deletePermission && {permission: deletePermission},
+                        permission: deletePermission,
                         enabled: 'selected',
                         action: show('delete')
                     }]}
