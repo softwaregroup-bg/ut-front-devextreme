@@ -222,7 +222,11 @@ const Explorer: StyledType = ({
     const nav = children && navigationOpened && <SplitterPanel key='nav' size={15}>{children}</SplitterPanel>;
     return (
         <div className={clsx('flex', 'flex-column', className)} style={{height: '100%'}} >
-            {buttons?.length && <Toolbar left={left} right={right} style={backgroundNone} />}
+            {
+                buttons?.length
+                    ? <Toolbar left={left} right={right} style={backgroundNone} />
+                    : null
+            }
             {
                 (nav || detailsPanel)
                     ? <Splitter style={flexGrow}>
