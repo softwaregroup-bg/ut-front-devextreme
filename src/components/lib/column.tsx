@@ -1,5 +1,5 @@
 import React from 'react';
-import { Checkbox, DropdownTest, SelectButton, Calendar, InputMask, InputText, InputTextarea, InputNumber } from '../prime';
+import { Checkbox, DropdownTest, SelectButton, Calendar, InputMask, InputText, InputTextarea, InputNumber, Password } from '../prime';
 import { Property } from '../types';
 import titleCase from './titleCase';
 import getType from './getType';
@@ -118,6 +118,13 @@ export default function columnProps({
                 return new Date(value).toLocaleString();
             };
             break;
+        case 'password': {
+            body = function body(rowData) {
+                return rowData[fieldName]
+                    ? '*'.repeat(10)
+                    : ''
+            }
+        }
     }
     if (!property?.readOnly && editable) {
         editor = function editor(p) {
@@ -217,6 +224,13 @@ export default function columnProps({
                         {...props}
                         name={inputId}
                     />;
+                case 'password':
+                    return <Password
+                        value={p.rowData[fieldName]}
+                        onInput={event => p.editorCallback(event.currentTarget.value)}
+                        id={inputId}
+                        {...props}
+                    />
                 case 'text':
                     return <InputTextarea
                         className='w-full'
