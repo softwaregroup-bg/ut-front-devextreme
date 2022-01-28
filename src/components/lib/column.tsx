@@ -122,8 +122,8 @@ export default function columnProps({
             body = function body(rowData) {
                 return rowData[fieldName]
                     ? '*'.repeat(10)
-                    : ''
-            }
+                    : '';
+            };
         }
     }
     if (!property?.readOnly && editable) {
@@ -230,7 +230,7 @@ export default function columnProps({
                         onInput={event => p.editorCallback(event.currentTarget.value)}
                         id={inputId}
                         {...props}
-                    />
+                    />;
                 case 'text':
                     return <InputTextarea
                         className='w-full'
