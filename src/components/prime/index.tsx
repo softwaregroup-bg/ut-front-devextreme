@@ -1,5 +1,11 @@
 import React from 'react';
-import { Dropdown } from '../prime';
+import {Dropdown} from 'primereact/dropdown';
+import {MultiSelect} from 'primereact/multiselect';
+import {TreeSelect} from 'primereact/treeselect';
+import {TreeTable} from 'primereact/treetable';
+import {SelectButton} from 'primereact/selectbutton';
+import {DataTable} from 'primereact/datatable';
+import {Checkbox} from 'primereact/checkbox';
 
 export { AutoComplete } from 'primereact/autocomplete';
 export { Button } from 'primereact/button';
@@ -45,11 +51,57 @@ const valueTemplate = (option, {optionLabel, name}) => {
 };
 
 export class DropdownTest extends Dropdown {
+    // @ts-ignore
     static defaultProps = Object.assign({}, Dropdown.defaultProps, {valueTemplate});
 
     renderLabel(option) {
         return option
+            // @ts-ignore
             ? super.renderLabel(option)
+            // @ts-ignore
             : <span className='w-full inline-flex' data-testid={this.props.name}>{super.renderLabel(option)}</span>;
     }
 }
+
+export class MultiSelectTest extends MultiSelect {
+    renderLabel(...params) {
+        // @ts-ignore
+        return <span className='w-full inline-flex' data-testid={this.props.name}>{super.renderLabel(...params)}</span>;
+    }
+};
+
+export class TreeSelectTest extends TreeSelect {
+    renderLabel(...params) {
+        // @ts-ignore
+        return <span className='w-full inline-flex' data-testid={this.props.name}>{super.renderLabel(...params)}</span>;
+    }
+};
+
+export class TreeTableTest extends TreeTable {
+    renderTable(...params) {
+        // @ts-ignore
+        return <span className='w-full inline-flex' data-testid={this.props.id}>{super.renderTable(...params)}</span>;
+    }
+};
+
+export class SelectButtonTest extends SelectButton {
+    renderItems() {
+        // @ts-ignore
+        return <span className='w-full inline-flex' data-testid={this.props.id}>{super.renderItems()}</span>;
+    }
+};
+
+export class DataTableTest extends DataTable {
+    renderContent(...params) {
+        // @ts-ignore
+        return <span className='w-full' data-testid={this.props.id}>{super.renderContent(...params)}</span>;
+    }
+};
+
+export class CheckboxTest extends Checkbox {
+    render(...params) {
+        // @ts-ignore
+        // eslint-disable-next-line react/jsx-handler-names
+        return <span className='w-full' data-testid={this.props.id} onClick={this.onClick}>{super.render(...params)}</span>;
+    }
+};

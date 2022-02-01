@@ -1,3 +1,43 @@
+## [1.56.10](https://github.com/softwaregroup-bg/ut-front-devextreme/compare/v1.56.9...v1.56.10) (2022-02-01)
+
+
+### Bug Fixes
+
+* circular dependecies ([cea0042](https://github.com/softwaregroup-bg/ut-front-devextreme/commit/cea0042bc216db9fce0fc415e8272d0e6098c60b))
+* react-hook-form loses Symbol during setValue ([40eed21](https://github.com/softwaregroup-bg/ut-front-devextreme/commit/40eed2107494a18dad7aa4749cf3459dae158066))
+
+
+
+## [1.56.9](https://github.com/softwaregroup-bg/ut-front-devextreme/compare/v1.56.8...v1.56.9) (2022-01-31)
+
+
+### Bug Fixes
+
+* editor drag and drop ([5cda20c](https://github.com/softwaregroup-bg/ut-front-devextreme/commit/5cda20c09f5a79b578273bed7e1e988624fcdccb))
+
+
+
+## [1.56.8](https://github.com/softwaregroup-bg/ut-front-devextreme/compare/v1.56.7...v1.56.8) (2022-01-31)
+
+
+### Bug Fixes
+
+* testability ([464edc4](https://github.com/softwaregroup-bg/ut-front-devextreme/commit/464edc41b2cdb374796717625f1055a88d851622))
+
+
+
+## [1.56.7](https://github.com/softwaregroup-bg/ut-front-devextreme/compare/v1.56.6...v1.56.7) (2022-01-29)
+
+
+
+## [1.56.6](https://github.com/softwaregroup-bg/ut-front-devextreme/compare/v1.56.5...v1.56.6) (2022-01-28)
+
+
+
+## [1.56.5](https://github.com/softwaregroup-bg/ut-front-devextreme/compare/v1.56.4...v1.56.5) (2022-01-28)
+
+
+
 ## [1.56.4](https://github.com/softwaregroup-bg/ut-front-devextreme/compare/v1.56.3...v1.56.4) (2022-01-27)
 
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import lodashGet from 'lodash.get';
 
-import {DataTable, Column, Toolbar, Button} from '../../prime';
+import {DataTableTest, Column, Toolbar, Button} from '../../prime';
 import columnProps from '../../lib/column';
 import {CHANGE, INDEX, KEY, NEW} from '../const';
 import type {Properties} from '../../types';
@@ -41,7 +41,8 @@ const masterFilter = (master, filter) => master && Object.fromEntries(
 const noRows = Object.freeze([]);
 
 export default React.forwardRef<{}, any>(({
-    name: resultSet,
+    name,
+    id: resultSet = name,
     onChange,
     getValues,
     counter,
@@ -124,7 +125,7 @@ export default React.forwardRef<{}, any>(({
     const complete = React.useCallback(({data, newData}) => {
         const changed = [...allRows];
         const originalIndex = data[INDEX];
-        const {[NEW]: ignore, $pivot, [KEY]: key, [INDEX]: index, ...values} = newData;
+        const {[NEW]: ignore, $pivot, [KEY]: key, [CHANGE]: change, [INDEX]: index, ...values} = newData;
         if (originalIndex != null) {
             changed[originalIndex] = values;
             onChange(changed);
@@ -208,13 +209,14 @@ export default React.forwardRef<{}, any>(({
     return (
         <>
             {!disabled && (allowAdd || allowDelete) && <Toolbar className="p-0 border-none" left={leftToolbarTemplate} right={null} style={backgroundNone}></Toolbar>}
-            <DataTable
+            <DataTableTest
                 editMode='row'
                 className='editable-cells-table'
                 emptyMessage=''
                 selection={selected}
                 onSelectionChange={handleSelected}
                 dataKey={KEY}
+                id={resultSet}
                 {...props}
                 value={rows}
                 onRowEditComplete={complete}
@@ -236,7 +238,7 @@ export default React.forwardRef<{}, any>(({
                     })
                 }
                 {allowEdit && <Column rowEditor headerStyle={editStyle} bodyStyle={editBodyStyle}></Column>}
-            </DataTable>
+            </DataTableTest>
         </>
     );
 });
