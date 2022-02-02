@@ -1,9 +1,9 @@
 import React from 'react';
-import { CheckboxTest, DropdownTest, SelectButton, Calendar, InputMask, InputText, InputTextarea, InputNumber } from '../prime';
+import { CheckboxTest, DropdownTest, SelectButton, RadioButton, Calendar, InputMask, InputText, InputTextarea, InputNumber } from '../prime';
 import { Property } from '../types';
 import titleCase from './titleCase';
 import getType from './getType';
-import {KEY} from '../Form/const';
+import {KEY, CHANGE} from '../Form/const';
 export interface TableFilter {
     filters?: {
         [name: string]: {
@@ -102,6 +102,17 @@ export default function columnProps({
                 />;
             };
             break;
+        case 'radio':
+            body = function body(rowData) {
+                return <RadioButton
+                    checked={rowData[fieldName]}
+                    disabled
+                    // onChange={(e) => {}}
+                    {...props}
+                    name={filterId}
+                />;
+            };
+            break;
         case 'date':
             body = function body(rowData) {
                 return dateOrNull(rowData[fieldName])?.toLocaleDateString();
@@ -174,6 +185,22 @@ export default function columnProps({
                         value={props?.split ? p.rowData[fieldName]?.split(props.split).filter(Boolean) : p.rowData[fieldName]}
                         onChange={event => p.editorCallback(props?.split ? event.value.join(props.split) || null : event.value)}
                         id={inputId}
+                        {...props}
+                        name={inputId}
+                    />;
+                case 'radio':
+                    return <RadioButton
+                        checked={p.rowData[fieldName]}
+                        onChange={async event => {
+                            for (const value of p.props.value) {
+                                if (!value[fieldName]) continue;
+                                const data = {...value};
+                                value[fieldName] = false;
+                                data[CHANGE]({data, newData: value});
+                            }
+                            return p.editorCallback(event.checked);
+                        }}
+                        inputId={inputId}
                         {...props}
                         name={inputId}
                     />;
