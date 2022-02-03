@@ -249,6 +249,7 @@ export default function columnProps({
                         value={p.rowData[fieldName]}
                         onInput={event => p.editorCallback(event.currentTarget.value)}
                         id={inputId}
+                        feedback={false}
                         {...props}
                     />;
                 case 'text':
