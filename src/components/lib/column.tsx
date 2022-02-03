@@ -251,6 +251,7 @@ export default function columnProps({
                         id={inputId}
                         feedback={false}
                         {...props}
+                        name={inputId}
                     />;
                 case 'text':
                     return <InputTextarea
