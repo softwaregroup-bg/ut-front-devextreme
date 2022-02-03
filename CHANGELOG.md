@@ -1,3 +1,21 @@
+# [1.57.0](https://github.com/softwaregroup-bg/ut-front-devextreme/compare/v1.56.11...v1.57.0) (2022-02-03)
+
+
+### Features
+
+* radio table column ([#7](https://github.com/softwaregroup-bg/ut-front-devextreme/issues/7)) ([6c66635](https://github.com/softwaregroup-bg/ut-front-devextreme/commit/6c66635d2d8086e80cecbf4202ceb84f16d5ee7a))
+
+
+
+## [1.56.11](https://github.com/softwaregroup-bg/ut-front-devextreme/compare/v1.56.10...v1.56.11) (2022-02-02)
+
+
+### Bug Fixes
+
+* preserve tabs state ([38784c3](https://github.com/softwaregroup-bg/ut-front-devextreme/commit/38784c305c5591b8a757383be16bee8a4fa57c55))
+
+
+
 ## [1.56.10](https://github.com/softwaregroup-bg/ut-front-devextreme/compare/v1.56.9...v1.56.10) (2022-02-01)
 
 
