@@ -1978,6 +1978,7 @@ exports[`<Form /> Table render equals snapshot 1`] = `
                                     >
                                       <input
                                         class="p-inputtext p-component p-password-input"
+                                        name="table1[0].password"
                                         type="password"
                                         value=""
                                       />
