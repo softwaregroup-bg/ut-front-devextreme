@@ -129,7 +129,7 @@ export default React.forwardRef<{}, any>(({
         for (const [key, value] of Object.entries(properties)) {
             // @ts-ignore Property 'widget' does not exist on type 'unknown'
             if (value?.widget?.type !== 'radio' || !values[key]) continue;
-            for (const id in changed) changed[id][key] = false;
+            for (const id in changed) changed[id][key] && (changed[id][key] = false);
         }
         if (originalIndex != null) {
             changed[originalIndex] = values;
