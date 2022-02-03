@@ -3,7 +3,7 @@ import { CheckboxTest, DropdownTest, SelectButton, RadioButton, Calendar, InputM
 import { Property } from '../types';
 import titleCase from './titleCase';
 import getType from './getType';
-import {KEY, CHANGE} from '../Form/const';
+import {KEY} from '../Form/const';
 export interface TableFilter {
     filters?: {
         [name: string]: {
@@ -191,15 +191,7 @@ export default function columnProps({
                 case 'radio':
                     return <RadioButton
                         checked={p.rowData[fieldName]}
-                        onChange={async event => {
-                            for (const value of p.props.value) {
-                                if (!value[fieldName]) continue;
-                                const data = {...value};
-                                value[fieldName] = false;
-                                data[CHANGE]({data, newData: value});
-                            }
-                            return p.editorCallback(event.checked);
-                        }}
+                        onChange={event => p.editorCallback(event.checked)}
                         inputId={inputId}
                         {...props}
                         name={inputId}
