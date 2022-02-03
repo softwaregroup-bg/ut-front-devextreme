@@ -127,6 +127,7 @@ export default React.forwardRef<{}, any>(({
         const originalIndex = data[INDEX];
         const {[NEW]: ignore, $pivot, [KEY]: key, [CHANGE]: change, [INDEX]: index, ...values} = newData;
         for (const [key, value] of Object.entries(properties)) {
+            // @ts-ignore Property 'widget' does not exist on type 'unknown'
             if (value?.widget?.type !== 'radio' || !values[key]) continue;
             for (const id in changed) changed[id][key] = false;
         }
