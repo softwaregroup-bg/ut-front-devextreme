@@ -170,11 +170,17 @@ export default function input(
         </Field>;
         case 'selectTable': {
             const all = dropdowns?.[dropdown];
-            const value = all?.filter(filterBy) || [];
+            const paramSet = Boolean(props.widgets?.length);
             const dataKey = props.dataKey || 'value';
+            const value = (all?.filter(filterBy) || []).map(value => {
+                if (!paramSet || !field.value) return value;
+                return {
+                    ...field.value.find(v => v[dataKey] === value[dataKey]) || {},
+                    ...value
+                }
+            });
             const valueKeys = value.map(item => item[dataKey]);
             const single = props.selectionMode === 'single';
-            const paramSet = Boolean(props.widgets?.length);
             const hidden = !single && (field.value || []).filter(item => paramSet ? !valueKeys.includes(item[dataKey]) : !valueKeys.includes(item));
             const selection = single
                 ? paramSet
