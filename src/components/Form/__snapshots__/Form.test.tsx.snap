@@ -1237,6 +1237,331 @@ exports[`<Form /> Input render equals snapshot 1`] = `
                   >
                     <label
                       class="col-12 md:col-4"
+                      for="input.multiSelectPanel"
+                    >
+                      Multi Select Panel
+                    </label>
+                    <div
+                      class="col-12 md:col-8"
+                    >
+                      <span
+                        class="w-full"
+                        data-testid="input.multiSelectPanel"
+                      >
+                        <div
+                          class="p-multiselect p-component p-inputwrapper p-inputwrapper-filled p-inputwrapper-focus MultiSelectPanel-root-3 MultiSelectPanel-root-4 w-full"
+                          id="input.multiSelectPanel"
+                        >
+                          <div
+                            class="p-hidden-accessible"
+                          >
+                            <input
+                              aria-expanded="true"
+                              aria-haspopup="listbox"
+                              name="input.multiSelectPanel"
+                              readonly=""
+                              role="listbox"
+                              tabindex="0"
+                              type="text"
+                            />
+                          </div>
+                          <div
+                            class="p-multiselect-label-container"
+                          >
+                            <div
+                              class="p-multiselect-label p-multiselect-items-label"
+                            >
+                              One
+                            </div>
+                          </div>
+                          <div
+                            class="p-multiselect-trigger"
+                          >
+                            <span
+                              class="p-multiselect-trigger-icon p-c pi pi-chevron-down"
+                            />
+                          </div>
+                          <div
+                            class="p-multiselect-panel p-component"
+                          >
+                            <div
+                              class="p-multiselect-header"
+                            >
+                              <div
+                                class="p-checkbox p-component"
+                              >
+                                <div
+                                  class="p-hidden-accessible"
+                                >
+                                  <input
+                                    type="checkbox"
+                                  />
+                                </div>
+                                <div
+                                  aria-checked="false"
+                                  class="p-checkbox-box"
+                                  role="checkbox"
+                                />
+                              </div>
+                              <button
+                                class="p-multiselect-close p-link"
+                                type="button"
+                              >
+                                <span
+                                  class="p-multiselect-close-icon pi pi-times"
+                                />
+                              </button>
+                            </div>
+                            <div
+                              class="p-multiselect-items-wrapper"
+                              style="max-height: 200px;"
+                            >
+                              <ul
+                                aria-multiselectable="true"
+                                class="p-multiselect-items p-component"
+                                role="listbox"
+                              >
+                                <li
+                                  aria-selected="true"
+                                  class="p-multiselect-item p-highlight"
+                                  role="option"
+                                  tabindex="0"
+                                >
+                                  <div
+                                    class="p-checkbox p-component"
+                                  >
+                                    <div
+                                      class="p-checkbox-box p-highlight"
+                                    >
+                                      <span
+                                        class="p-checkbox-icon p-c pi pi-check"
+                                      />
+                                    </div>
+                                  </div>
+                                  <span>
+                                    One
+                                  </span>
+                                </li>
+                                <li
+                                  aria-selected="false"
+                                  class="p-multiselect-item"
+                                  role="option"
+                                  tabindex="0"
+                                >
+                                  <div
+                                    class="p-checkbox p-component"
+                                  >
+                                    <div
+                                      class="p-checkbox-box"
+                                    >
+                                      <span
+                                        class="p-checkbox-icon p-c"
+                                      />
+                                    </div>
+                                  </div>
+                                  <span>
+                                    Two
+                                  </span>
+                                </li>
+                                <li
+                                  aria-selected="false"
+                                  class="p-multiselect-item"
+                                  role="option"
+                                  tabindex="0"
+                                >
+                                  <div
+                                    class="p-checkbox p-component"
+                                  >
+                                    <div
+                                      class="p-checkbox-box"
+                                    >
+                                      <span
+                                        class="p-checkbox-icon p-c"
+                                      />
+                                    </div>
+                                  </div>
+                                  <span>
+                                    Three
+                                  </span>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="field grid"
+                  >
+                    <label
+                      class="col-12 md:col-4"
+                      for="input.multiSelectTreeTable"
+                    >
+                      Multi Select Tree Table
+                    </label>
+                    <div
+                      class="col-12 md:col-8"
+                    >
+                      <div
+                        class="p-treetable p-component w-full"
+                        data-scrollselectors=".p-treetable-scrollable-body"
+                        id="input.multiSelectTreeTable"
+                      >
+                        <span
+                          class="w-full inline-flex"
+                          data-testid="input.multiSelectTreeTable"
+                        >
+                          <div
+                            class="p-treetable-wrapper"
+                          >
+                            <table>
+                              <thead
+                                class="p-treetable-thead"
+                              >
+                                <tr>
+                                  <th
+                                    class=""
+                                  >
+                                    <span
+                                      class="p-column-title"
+                                    />
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody
+                                class="p-treetable-tbody"
+                              >
+                                <tr
+                                  class=""
+                                  tabindex="0"
+                                >
+                                  <td
+                                    class=""
+                                  >
+                                    <button
+                                      class="p-treetable-toggler p-link p-unselectable-text"
+                                      style="margin-left: 0px; visibility: hidden;"
+                                      tabindex="-1"
+                                      type="button"
+                                    >
+                                      <i
+                                        class="\\"p-treetable-toggler-icon pi pi-fw pi-chevron-right"
+                                      />
+                                    </button>
+                                    <div
+                                      aria-checked="true"
+                                      class="p-checkbox p-treetable-checkbox p-component"
+                                      role="checkbox"
+                                    >
+                                      <div
+                                        class="p-hidden-accessible"
+                                      >
+                                        <input
+                                          type="checkbox"
+                                        />
+                                      </div>
+                                      <div
+                                        class="p-checkbox-box p-highlight"
+                                      >
+                                        <span
+                                          class="p-checkbox-icon p-c pi pi-check"
+                                        />
+                                      </div>
+                                    </div>
+                                    One
+                                  </td>
+                                </tr>
+                                <tr
+                                  class=""
+                                  tabindex="0"
+                                >
+                                  <td
+                                    class=""
+                                  >
+                                    <button
+                                      class="p-treetable-toggler p-link p-unselectable-text"
+                                      style="margin-left: 0px; visibility: hidden;"
+                                      tabindex="-1"
+                                      type="button"
+                                    >
+                                      <i
+                                        class="\\"p-treetable-toggler-icon pi pi-fw pi-chevron-right"
+                                      />
+                                    </button>
+                                    <div
+                                      class="p-checkbox p-treetable-checkbox p-component"
+                                      role="checkbox"
+                                    >
+                                      <div
+                                        class="p-hidden-accessible"
+                                      >
+                                        <input
+                                          type="checkbox"
+                                        />
+                                      </div>
+                                      <div
+                                        class="p-checkbox-box"
+                                      >
+                                        <span
+                                          class="p-checkbox-icon p-c"
+                                        />
+                                      </div>
+                                    </div>
+                                    Two
+                                  </td>
+                                </tr>
+                                <tr
+                                  class=""
+                                  tabindex="0"
+                                >
+                                  <td
+                                    class=""
+                                  >
+                                    <button
+                                      class="p-treetable-toggler p-link p-unselectable-text"
+                                      style="margin-left: 0px; visibility: hidden;"
+                                      tabindex="-1"
+                                      type="button"
+                                    >
+                                      <i
+                                        class="\\"p-treetable-toggler-icon pi pi-fw pi-chevron-right"
+                                      />
+                                    </button>
+                                    <div
+                                      class="p-checkbox p-treetable-checkbox p-component"
+                                      role="checkbox"
+                                    >
+                                      <div
+                                        class="p-hidden-accessible"
+                                      >
+                                        <input
+                                          type="checkbox"
+                                        />
+                                      </div>
+                                      <div
+                                        class="p-checkbox-box"
+                                      >
+                                        <span
+                                          class="p-checkbox-icon p-c"
+                                        />
+                                      </div>
+                                    </div>
+                                    Three
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="field grid"
+                  >
+                    <label
+                      class="col-12 md:col-4"
                       for="input.selectTableWithFlags"
                     >
                       Select Table With Flags
@@ -1711,331 +2036,6 @@ exports[`<Form /> Input render equals snapshot 1`] = `
                                         </div>
                                       </div>
                                     </span>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="field grid"
-                  >
-                    <label
-                      class="col-12 md:col-4"
-                      for="input.multiSelectPanel"
-                    >
-                      Multi Select Panel
-                    </label>
-                    <div
-                      class="col-12 md:col-8"
-                    >
-                      <span
-                        class="w-full"
-                        data-testid="input.multiSelectPanel"
-                      >
-                        <div
-                          class="p-multiselect p-component p-inputwrapper p-inputwrapper-filled p-inputwrapper-focus MultiSelectPanel-root-3 MultiSelectPanel-root-4 w-full"
-                          id="input.multiSelectPanel"
-                        >
-                          <div
-                            class="p-hidden-accessible"
-                          >
-                            <input
-                              aria-expanded="true"
-                              aria-haspopup="listbox"
-                              name="input.multiSelectPanel"
-                              readonly=""
-                              role="listbox"
-                              tabindex="0"
-                              type="text"
-                            />
-                          </div>
-                          <div
-                            class="p-multiselect-label-container"
-                          >
-                            <div
-                              class="p-multiselect-label p-multiselect-items-label"
-                            >
-                              One
-                            </div>
-                          </div>
-                          <div
-                            class="p-multiselect-trigger"
-                          >
-                            <span
-                              class="p-multiselect-trigger-icon p-c pi pi-chevron-down"
-                            />
-                          </div>
-                          <div
-                            class="p-multiselect-panel p-component"
-                          >
-                            <div
-                              class="p-multiselect-header"
-                            >
-                              <div
-                                class="p-checkbox p-component"
-                              >
-                                <div
-                                  class="p-hidden-accessible"
-                                >
-                                  <input
-                                    type="checkbox"
-                                  />
-                                </div>
-                                <div
-                                  aria-checked="false"
-                                  class="p-checkbox-box"
-                                  role="checkbox"
-                                />
-                              </div>
-                              <button
-                                class="p-multiselect-close p-link"
-                                type="button"
-                              >
-                                <span
-                                  class="p-multiselect-close-icon pi pi-times"
-                                />
-                              </button>
-                            </div>
-                            <div
-                              class="p-multiselect-items-wrapper"
-                              style="max-height: 200px;"
-                            >
-                              <ul
-                                aria-multiselectable="true"
-                                class="p-multiselect-items p-component"
-                                role="listbox"
-                              >
-                                <li
-                                  aria-selected="true"
-                                  class="p-multiselect-item p-highlight"
-                                  role="option"
-                                  tabindex="0"
-                                >
-                                  <div
-                                    class="p-checkbox p-component"
-                                  >
-                                    <div
-                                      class="p-checkbox-box p-highlight"
-                                    >
-                                      <span
-                                        class="p-checkbox-icon p-c pi pi-check"
-                                      />
-                                    </div>
-                                  </div>
-                                  <span>
-                                    One
-                                  </span>
-                                </li>
-                                <li
-                                  aria-selected="false"
-                                  class="p-multiselect-item"
-                                  role="option"
-                                  tabindex="0"
-                                >
-                                  <div
-                                    class="p-checkbox p-component"
-                                  >
-                                    <div
-                                      class="p-checkbox-box"
-                                    >
-                                      <span
-                                        class="p-checkbox-icon p-c"
-                                      />
-                                    </div>
-                                  </div>
-                                  <span>
-                                    Two
-                                  </span>
-                                </li>
-                                <li
-                                  aria-selected="false"
-                                  class="p-multiselect-item"
-                                  role="option"
-                                  tabindex="0"
-                                >
-                                  <div
-                                    class="p-checkbox p-component"
-                                  >
-                                    <div
-                                      class="p-checkbox-box"
-                                    >
-                                      <span
-                                        class="p-checkbox-icon p-c"
-                                      />
-                                    </div>
-                                  </div>
-                                  <span>
-                                    Three
-                                  </span>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    class="field grid"
-                  >
-                    <label
-                      class="col-12 md:col-4"
-                      for="input.multiSelectTreeTable"
-                    >
-                      Multi Select Tree Table
-                    </label>
-                    <div
-                      class="col-12 md:col-8"
-                    >
-                      <div
-                        class="p-treetable p-component w-full"
-                        data-scrollselectors=".p-treetable-scrollable-body"
-                        id="input.multiSelectTreeTable"
-                      >
-                        <span
-                          class="w-full inline-flex"
-                          data-testid="input.multiSelectTreeTable"
-                        >
-                          <div
-                            class="p-treetable-wrapper"
-                          >
-                            <table>
-                              <thead
-                                class="p-treetable-thead"
-                              >
-                                <tr>
-                                  <th
-                                    class=""
-                                  >
-                                    <span
-                                      class="p-column-title"
-                                    />
-                                  </th>
-                                </tr>
-                              </thead>
-                              <tbody
-                                class="p-treetable-tbody"
-                              >
-                                <tr
-                                  class=""
-                                  tabindex="0"
-                                >
-                                  <td
-                                    class=""
-                                  >
-                                    <button
-                                      class="p-treetable-toggler p-link p-unselectable-text"
-                                      style="margin-left: 0px; visibility: hidden;"
-                                      tabindex="-1"
-                                      type="button"
-                                    >
-                                      <i
-                                        class="\\"p-treetable-toggler-icon pi pi-fw pi-chevron-right"
-                                      />
-                                    </button>
-                                    <div
-                                      aria-checked="true"
-                                      class="p-checkbox p-treetable-checkbox p-component"
-                                      role="checkbox"
-                                    >
-                                      <div
-                                        class="p-hidden-accessible"
-                                      >
-                                        <input
-                                          type="checkbox"
-                                        />
-                                      </div>
-                                      <div
-                                        class="p-checkbox-box p-highlight"
-                                      >
-                                        <span
-                                          class="p-checkbox-icon p-c pi pi-check"
-                                        />
-                                      </div>
-                                    </div>
-                                    One
-                                  </td>
-                                </tr>
-                                <tr
-                                  class=""
-                                  tabindex="0"
-                                >
-                                  <td
-                                    class=""
-                                  >
-                                    <button
-                                      class="p-treetable-toggler p-link p-unselectable-text"
-                                      style="margin-left: 0px; visibility: hidden;"
-                                      tabindex="-1"
-                                      type="button"
-                                    >
-                                      <i
-                                        class="\\"p-treetable-toggler-icon pi pi-fw pi-chevron-right"
-                                      />
-                                    </button>
-                                    <div
-                                      class="p-checkbox p-treetable-checkbox p-component"
-                                      role="checkbox"
-                                    >
-                                      <div
-                                        class="p-hidden-accessible"
-                                      >
-                                        <input
-                                          type="checkbox"
-                                        />
-                                      </div>
-                                      <div
-                                        class="p-checkbox-box"
-                                      >
-                                        <span
-                                          class="p-checkbox-icon p-c"
-                                        />
-                                      </div>
-                                    </div>
-                                    Two
-                                  </td>
-                                </tr>
-                                <tr
-                                  class=""
-                                  tabindex="0"
-                                >
-                                  <td
-                                    class=""
-                                  >
-                                    <button
-                                      class="p-treetable-toggler p-link p-unselectable-text"
-                                      style="margin-left: 0px; visibility: hidden;"
-                                      tabindex="-1"
-                                      type="button"
-                                    >
-                                      <i
-                                        class="\\"p-treetable-toggler-icon pi pi-fw pi-chevron-right"
-                                      />
-                                    </button>
-                                    <div
-                                      class="p-checkbox p-treetable-checkbox p-component"
-                                      role="checkbox"
-                                    >
-                                      <div
-                                        class="p-hidden-accessible"
-                                      >
-                                        <input
-                                          type="checkbox"
-                                        />
-                                      </div>
-                                      <div
-                                        class="p-checkbox-box"
-                                      >
-                                        <span
-                                          class="p-checkbox-icon p-c"
-                                        />
-                                      </div>
-                                    </div>
-                                    Three
                                   </td>
                                 </tr>
                               </tbody>

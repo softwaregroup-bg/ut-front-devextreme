@@ -272,9 +272,9 @@ export const input: {
             className: 'xl:col-4',
             widgets: [
                 'input.selectTable',
-                'input.selectTableWithFlags',
                 'input.multiSelectPanel',
-                'input.multiSelectTreeTable'
+                'input.multiSelectTreeTable',
+                'input.selectTableWithFlags'
             ]
         }
     }
