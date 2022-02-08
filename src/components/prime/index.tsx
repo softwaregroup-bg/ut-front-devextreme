@@ -108,9 +108,9 @@ export class CheckboxTest extends Checkbox {
 };
 
 export class RadioButtonTest extends RadioButton {
-    renderContent(...params) {
+    render(...params) {
         // @ts-ignore
         // eslint-disable-next-line react/jsx-handler-names
-        return <span className='w-full' data-testid={this.props.id} onChange={this.onChange}>{super.renderContent(...params)}</span>;
+        return <span className='w-full' data-testid={this.props.id} onChange={this.onChange}>{super.render(...params)}</span>;
     }
 };
