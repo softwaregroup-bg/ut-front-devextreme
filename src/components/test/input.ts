@@ -83,13 +83,20 @@ const properties: Properties = {
     selectTable: {
         widget: {
             type: 'selectTable',
+            dropdown: 'select'
+        }
+    },
+    selectTableWithFlags: {
+        widget: {
+            type: 'selectTable',
             dropdown: 'select',
             items: {
                 properties: {
-                    isPrimary: {widget: {type: 'select-table-radio'}}
+                    flag1: {widget: {type: 'select-table-radio'}},
+                    flag2: {widget: {type: 'select-table-radio'}}
                 }
             },
-            widgets: ['isPrimary'],
+            widgets: ['flag1', 'flag2'],
             selectionMode: 'checkbox'
         }
     },
@@ -265,6 +272,7 @@ export const input: {
             className: 'xl:col-4',
             widgets: [
                 'input.selectTable',
+                'input.selectTableWithFlags',
                 'input.multiSelectPanel',
                 'input.multiSelectTreeTable'
             ]
