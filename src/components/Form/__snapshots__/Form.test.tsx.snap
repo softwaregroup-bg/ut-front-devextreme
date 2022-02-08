@@ -1112,6 +1112,200 @@ exports[`<Form /> Input render equals snapshot 1`] = `
                                       />
                                     </div>
                                   </th>
+                                </tr>
+                              </thead>
+                              <tbody
+                                class="p-datatable-tbody"
+                              >
+                                <tr
+                                  class="p-highlight p-selectable-row"
+                                  role="row"
+                                >
+                                  <td
+                                    class="p-selection-column"
+                                    role="cell"
+                                  >
+                                    <span
+                                      class="p-column-title"
+                                    />
+                                    <div
+                                      class="p-checkbox p-component p-checkbox-focused"
+                                    >
+                                      <div
+                                        aria-checked="true"
+                                        class="p-checkbox-box p-component p-highlight p-focus"
+                                        role="checkbox"
+                                        tabindex="0"
+                                      >
+                                        <span
+                                          class="p-checkbox-icon pi pi-check"
+                                        />
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td
+                                    class=""
+                                    role="cell"
+                                  >
+                                    <span
+                                      class="p-column-title"
+                                    />
+                                    One
+                                  </td>
+                                </tr>
+                                <tr
+                                  class="p-selectable-row p-row-odd"
+                                  role="row"
+                                >
+                                  <td
+                                    class="p-selection-column"
+                                    role="cell"
+                                  >
+                                    <span
+                                      class="p-column-title"
+                                    />
+                                    <div
+                                      class="p-checkbox p-component"
+                                    >
+                                      <div
+                                        aria-checked="false"
+                                        class="p-checkbox-box p-component"
+                                        role="checkbox"
+                                        tabindex="0"
+                                      >
+                                        <span
+                                          class="p-checkbox-icon"
+                                        />
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td
+                                    class=""
+                                    role="cell"
+                                  >
+                                    <span
+                                      class="p-column-title"
+                                    />
+                                    Two
+                                  </td>
+                                </tr>
+                                <tr
+                                  class="p-selectable-row"
+                                  role="row"
+                                >
+                                  <td
+                                    class="p-selection-column"
+                                    role="cell"
+                                  >
+                                    <span
+                                      class="p-column-title"
+                                    />
+                                    <div
+                                      class="p-checkbox p-component"
+                                    >
+                                      <div
+                                        aria-checked="false"
+                                        class="p-checkbox-box p-component"
+                                        role="checkbox"
+                                        tabindex="0"
+                                      >
+                                        <span
+                                          class="p-checkbox-icon"
+                                        />
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td
+                                    class=""
+                                    role="cell"
+                                  >
+                                    <span
+                                      class="p-column-title"
+                                    />
+                                    Three
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="field grid"
+                  >
+                    <label
+                      class="col-12 md:col-4"
+                      for="input.selectTableWithFlags"
+                    >
+                      Select Table With Flags
+                    </label>
+                    <div
+                      class="col-12 md:col-8"
+                    >
+                      <div
+                        class="p-datatable p-component p-datatable-selectable p-datatable-responsive-stack w-full"
+                        data-scrollselectors=".p-datatable-wrapper"
+                        id="input.selectTableWithFlags"
+                        pr_id_4=""
+                      >
+                        <span
+                          class="w-full"
+                          data-testid="input.selectTableWithFlags"
+                        >
+                          <div
+                            class="p-datatable-wrapper"
+                          >
+                            <table
+                              class="p-datatable-table"
+                              role="table"
+                            >
+                              <thead
+                                class="p-datatable-thead"
+                              >
+                                <tr
+                                  role="row"
+                                >
+                                  <th
+                                    class="p-selection-column"
+                                    role="columnheader"
+                                    style="width: 3rem;"
+                                  >
+                                    <div
+                                      class="p-column-header-content"
+                                    >
+                                      <span
+                                        class="p-column-title"
+                                      />
+                                      <div
+                                        class="p-checkbox p-component"
+                                      >
+                                        <div
+                                          aria-checked="false"
+                                          class="p-checkbox-box p-component"
+                                          role="checkbox"
+                                          tabindex="0"
+                                        >
+                                          <span
+                                            class="p-checkbox-icon"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </th>
+                                  <th
+                                    class=""
+                                    role="columnheader"
+                                  >
+                                    <div
+                                      class="p-column-header-content"
+                                    >
+                                      <span
+                                        class="p-column-title"
+                                      />
+                                    </div>
+                                  </th>
                                   <th
                                     class=""
                                     role="columnheader"
@@ -1123,9 +1317,27 @@ exports[`<Form /> Input render equals snapshot 1`] = `
                                         class="p-column-title"
                                       >
                                         <span
-                                          data-testid="input.selectTable.isPrimaryTitle"
+                                          data-testid="input.selectTableWithFlags.flag1Title"
                                         >
-                                          Primary
+                                          Flag1
+                                        </span>
+                                      </span>
+                                    </div>
+                                  </th>
+                                  <th
+                                    class=""
+                                    role="columnheader"
+                                  >
+                                    <div
+                                      class="p-column-header-content"
+                                    >
+                                      <span
+                                        class="p-column-title"
+                                      >
+                                        <span
+                                          data-testid="input.selectTableWithFlags.flag2Title"
+                                        >
+                                          Flag2
                                         </span>
                                       </span>
                                     </div>
@@ -1147,11 +1359,11 @@ exports[`<Form /> Input render equals snapshot 1`] = `
                                       class="p-column-title"
                                     />
                                     <div
-                                      class="p-checkbox p-component p-checkbox-focused"
+                                      class="p-checkbox p-component"
                                     >
                                       <div
                                         aria-checked="false"
-                                        class="p-checkbox-box p-component p-focus"
+                                        class="p-checkbox-box p-component"
                                         role="checkbox"
                                         tabindex="0"
                                       >
@@ -1178,21 +1390,59 @@ exports[`<Form /> Input render equals snapshot 1`] = `
                                       class="p-column-title"
                                     >
                                       <span
-                                        data-testid="input.selectTable.isPrimaryTitle"
+                                        data-testid="input.selectTableWithFlags.flag1Title"
                                       >
-                                        Primary
+                                        Flag1
                                       </span>
                                     </span>
                                     <div
                                       class="p-radiobutton p-component p-radiobutton-disabled"
-                                      id="input.selectTable"
+                                      id="input.selectTableWithFlags"
                                     >
                                       <div
                                         class="p-hidden-accessible"
                                       >
                                         <input
                                           disabled=""
-                                          name="input.selectTable.isPrimaryFilter"
+                                          name="input.selectTableWithFlags.flag1Filter"
+                                          tabindex="0"
+                                          type="radio"
+                                        />
+                                      </div>
+                                      <div
+                                        aria-checked="false"
+                                        class="p-radiobutton-box p-disabled"
+                                        role="radio"
+                                      >
+                                        <div
+                                          class="p-radiobutton-icon"
+                                        />
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td
+                                    class="p-editable-column"
+                                    role="cell"
+                                  >
+                                    <span
+                                      class="p-column-title"
+                                    >
+                                      <span
+                                        data-testid="input.selectTableWithFlags.flag2Title"
+                                      >
+                                        Flag2
+                                      </span>
+                                    </span>
+                                    <div
+                                      class="p-radiobutton p-component p-radiobutton-disabled"
+                                      id="input.selectTableWithFlags"
+                                    >
+                                      <div
+                                        class="p-hidden-accessible"
+                                      >
+                                        <input
+                                          disabled=""
+                                          name="input.selectTableWithFlags.flag2Filter"
                                           tabindex="0"
                                           type="radio"
                                         />
@@ -1252,21 +1502,59 @@ exports[`<Form /> Input render equals snapshot 1`] = `
                                       class="p-column-title"
                                     >
                                       <span
-                                        data-testid="input.selectTable.isPrimaryTitle"
+                                        data-testid="input.selectTableWithFlags.flag1Title"
                                       >
-                                        Primary
+                                        Flag1
                                       </span>
                                     </span>
                                     <div
                                       class="p-radiobutton p-component p-radiobutton-disabled"
-                                      id="input.selectTable"
+                                      id="input.selectTableWithFlags"
                                     >
                                       <div
                                         class="p-hidden-accessible"
                                       >
                                         <input
                                           disabled=""
-                                          name="input.selectTable.isPrimaryFilter"
+                                          name="input.selectTableWithFlags.flag1Filter"
+                                          tabindex="0"
+                                          type="radio"
+                                        />
+                                      </div>
+                                      <div
+                                        aria-checked="false"
+                                        class="p-radiobutton-box p-disabled"
+                                        role="radio"
+                                      >
+                                        <div
+                                          class="p-radiobutton-icon"
+                                        />
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td
+                                    class="p-editable-column"
+                                    role="cell"
+                                  >
+                                    <span
+                                      class="p-column-title"
+                                    >
+                                      <span
+                                        data-testid="input.selectTableWithFlags.flag2Title"
+                                      >
+                                        Flag2
+                                      </span>
+                                    </span>
+                                    <div
+                                      class="p-radiobutton p-component p-radiobutton-disabled"
+                                      id="input.selectTableWithFlags"
+                                    >
+                                      <div
+                                        class="p-hidden-accessible"
+                                      >
+                                        <input
+                                          disabled=""
+                                          name="input.selectTableWithFlags.flag2Filter"
                                           tabindex="0"
                                           type="radio"
                                         />
@@ -1326,21 +1614,59 @@ exports[`<Form /> Input render equals snapshot 1`] = `
                                       class="p-column-title"
                                     >
                                       <span
-                                        data-testid="input.selectTable.isPrimaryTitle"
+                                        data-testid="input.selectTableWithFlags.flag1Title"
                                       >
-                                        Primary
+                                        Flag1
                                       </span>
                                     </span>
                                     <div
                                       class="p-radiobutton p-component p-radiobutton-disabled"
-                                      id="input.selectTable"
+                                      id="input.selectTableWithFlags"
                                     >
                                       <div
                                         class="p-hidden-accessible"
                                       >
                                         <input
                                           disabled=""
-                                          name="input.selectTable.isPrimaryFilter"
+                                          name="input.selectTableWithFlags.flag1Filter"
+                                          tabindex="0"
+                                          type="radio"
+                                        />
+                                      </div>
+                                      <div
+                                        aria-checked="false"
+                                        class="p-radiobutton-box p-disabled"
+                                        role="radio"
+                                      >
+                                        <div
+                                          class="p-radiobutton-icon"
+                                        />
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td
+                                    class="p-editable-column"
+                                    role="cell"
+                                  >
+                                    <span
+                                      class="p-column-title"
+                                    >
+                                      <span
+                                        data-testid="input.selectTableWithFlags.flag2Title"
+                                      >
+                                        Flag2
+                                      </span>
+                                    </span>
+                                    <div
+                                      class="p-radiobutton p-component p-radiobutton-disabled"
+                                      id="input.selectTableWithFlags"
+                                    >
+                                      <div
+                                        class="p-hidden-accessible"
+                                      >
+                                        <input
+                                          disabled=""
+                                          name="input.selectTableWithFlags.flag2Filter"
                                           tabindex="0"
                                           type="radio"
                                         />
@@ -1783,7 +2109,7 @@ exports[`<Form /> Table render equals snapshot 1`] = `
                         class="p-datatable p-component p-datatable-selectable p-datatable-responsive-stack w-full"
                         data-scrollselectors=".p-datatable-wrapper"
                         id="table1"
-                        pr_id_4=""
+                        pr_id_5=""
                       >
                         <span
                           class="w-full"
@@ -2489,7 +2815,7 @@ exports[`<Form /> Table render equals snapshot 1`] = `
                         class="p-datatable p-component p-datatable-selectable p-datatable-responsive-stack w-full"
                         data-scrollselectors=".p-datatable-wrapper"
                         id="table2"
-                        pr_id_5=""
+                        pr_id_6=""
                       >
                         <span
                           class="w-full"
@@ -3069,7 +3395,7 @@ exports[`<Form /> Table render equals snapshot 1`] = `
                         class="p-datatable p-component p-datatable-selectable p-datatable-responsive-stack w-full"
                         data-scrollselectors=".p-datatable-wrapper"
                         id="table3"
-                        pr_id_6=""
+                        pr_id_7=""
                       >
                         <span
                           class="w-full"
