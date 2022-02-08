@@ -213,7 +213,6 @@ export default function input(
                                 );
                             }
                             for (const key of props.widgets) {
-                                if (props?.items?.properties?.[key]?.widget?.type !== 'select-table-radio') continue;
                                 const setWidgetIndex = value.findIndex(e => e[key]);
                                 if (setWidgetIndex > -1 && !event.value.find(e => e[key])) {
                                     delete value[setWidgetIndex][key];
