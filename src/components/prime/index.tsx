@@ -6,6 +6,7 @@ import {TreeTable} from 'primereact/treetable';
 import {SelectButton} from 'primereact/selectbutton';
 import {DataTable} from 'primereact/datatable';
 import {Checkbox} from 'primereact/checkbox';
+import { RadioButton } from 'primereact/radiobutton';
 
 export { AutoComplete } from 'primereact/autocomplete';
 export { Button } from 'primereact/button';
@@ -105,3 +106,10 @@ export class CheckboxTest extends Checkbox {
         return <span className='w-full' data-testid={this.props.id} onClick={this.onClick}>{super.render(...params)}</span>;
     }
 };
+
+export class RadioButtonTest extends RadioButton {
+    renderContent(...params) {
+        // @ts-ignore
+        return <span className='w-full' data-testid={this.props.id} onChange={this.onChange}>{super.renderContent(...params)}</span>;
+    }
+}

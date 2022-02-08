@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckboxTest, DropdownTest, SelectButton, RadioButton, Calendar, InputMask, InputText, InputTextarea, InputNumber, Password } from '../prime';
+import { CheckboxTest, DropdownTest, SelectButton, RadioButtonTest, Calendar, InputMask, InputText, InputTextarea, InputNumber, Password } from '../prime';
 import { Property } from '../types';
 import titleCase from './titleCase';
 import getType from './getType';
@@ -104,7 +104,7 @@ export default function columnProps({
             break;
         case 'radio':
             body = function body(rowData) {
-                return <RadioButton
+                return <RadioButtonTest
                     checked={rowData[fieldName]}
                     disabled
                     // onChange={(e) => {}}
@@ -115,7 +115,7 @@ export default function columnProps({
             break;
         case 'select-table-radio':
             body = function body(rowData, {props}) {
-                return <RadioButton
+                return <RadioButtonTest
                     checked={rowData[fieldName]}
                     disabled={!props?.selection?.filter(selected => selected[props.dataKey] === rowData[props.dataKey])?.length}
                     onChange={event => {
@@ -213,7 +213,7 @@ export default function columnProps({
                         name={inputId}
                     />;
                 case 'radio':
-                    return <RadioButton
+                    return <RadioButtonTest
                         checked={p.rowData[fieldName]}
                         onChange={event => p.editorCallback(event.checked)}
                         inputId={inputId}
