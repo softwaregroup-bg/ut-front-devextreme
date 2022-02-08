@@ -112,4 +112,4 @@ export class RadioButtonTest extends RadioButton {
         // @ts-ignore
         return <span className='w-full' data-testid={this.props.id} onChange={this.onChange}>{super.renderContent(...params)}</span>;
     }
-}
+};
