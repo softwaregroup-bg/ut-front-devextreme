@@ -1395,30 +1395,35 @@ exports[`<Form /> Input render equals snapshot 1`] = `
                                         Flag1
                                       </span>
                                     </span>
-                                    <div
-                                      class="p-radiobutton p-component p-radiobutton-disabled"
-                                      id="input.selectTableWithFlags"
+                                    <span
+                                      class="w-full"
+                                      data-testid="input.selectTableWithFlags"
                                     >
                                       <div
-                                        class="p-hidden-accessible"
-                                      >
-                                        <input
-                                          disabled=""
-                                          name="input.selectTableWithFlags.flag1Filter"
-                                          tabindex="0"
-                                          type="radio"
-                                        />
-                                      </div>
-                                      <div
-                                        aria-checked="false"
-                                        class="p-radiobutton-box p-disabled"
-                                        role="radio"
+                                        class="p-radiobutton p-component p-radiobutton-disabled"
+                                        id="input.selectTableWithFlags"
                                       >
                                         <div
-                                          class="p-radiobutton-icon"
-                                        />
+                                          class="p-hidden-accessible"
+                                        >
+                                          <input
+                                            disabled=""
+                                            name="input.selectTableWithFlags.flag1Filter"
+                                            tabindex="0"
+                                            type="radio"
+                                          />
+                                        </div>
+                                        <div
+                                          aria-checked="false"
+                                          class="p-radiobutton-box p-disabled"
+                                          role="radio"
+                                        >
+                                          <div
+                                            class="p-radiobutton-icon"
+                                          />
+                                        </div>
                                       </div>
-                                    </div>
+                                    </span>
                                   </td>
                                   <td
                                     class="p-editable-column"
@@ -1433,30 +1438,35 @@ exports[`<Form /> Input render equals snapshot 1`] = `
                                         Flag2
                                       </span>
                                     </span>
-                                    <div
-                                      class="p-radiobutton p-component p-radiobutton-disabled"
-                                      id="input.selectTableWithFlags"
+                                    <span
+                                      class="w-full"
+                                      data-testid="input.selectTableWithFlags"
                                     >
                                       <div
-                                        class="p-hidden-accessible"
-                                      >
-                                        <input
-                                          disabled=""
-                                          name="input.selectTableWithFlags.flag2Filter"
-                                          tabindex="0"
-                                          type="radio"
-                                        />
-                                      </div>
-                                      <div
-                                        aria-checked="false"
-                                        class="p-radiobutton-box p-disabled"
-                                        role="radio"
+                                        class="p-radiobutton p-component p-radiobutton-disabled"
+                                        id="input.selectTableWithFlags"
                                       >
                                         <div
-                                          class="p-radiobutton-icon"
-                                        />
+                                          class="p-hidden-accessible"
+                                        >
+                                          <input
+                                            disabled=""
+                                            name="input.selectTableWithFlags.flag2Filter"
+                                            tabindex="0"
+                                            type="radio"
+                                          />
+                                        </div>
+                                        <div
+                                          aria-checked="false"
+                                          class="p-radiobutton-box p-disabled"
+                                          role="radio"
+                                        >
+                                          <div
+                                            class="p-radiobutton-icon"
+                                          />
+                                        </div>
                                       </div>
-                                    </div>
+                                    </span>
                                   </td>
                                 </tr>
                                 <tr
@@ -1507,30 +1517,35 @@ exports[`<Form /> Input render equals snapshot 1`] = `
                                         Flag1
                                       </span>
                                     </span>
-                                    <div
-                                      class="p-radiobutton p-component p-radiobutton-disabled"
-                                      id="input.selectTableWithFlags"
+                                    <span
+                                      class="w-full"
+                                      data-testid="input.selectTableWithFlags"
                                     >
                                       <div
-                                        class="p-hidden-accessible"
-                                      >
-                                        <input
-                                          disabled=""
-                                          name="input.selectTableWithFlags.flag1Filter"
-                                          tabindex="0"
-                                          type="radio"
-                                        />
-                                      </div>
-                                      <div
-                                        aria-checked="false"
-                                        class="p-radiobutton-box p-disabled"
-                                        role="radio"
+                                        class="p-radiobutton p-component p-radiobutton-disabled"
+                                        id="input.selectTableWithFlags"
                                       >
                                         <div
-                                          class="p-radiobutton-icon"
-                                        />
+                                          class="p-hidden-accessible"
+                                        >
+                                          <input
+                                            disabled=""
+                                            name="input.selectTableWithFlags.flag1Filter"
+                                            tabindex="0"
+                                            type="radio"
+                                          />
+                                        </div>
+                                        <div
+                                          aria-checked="false"
+                                          class="p-radiobutton-box p-disabled"
+                                          role="radio"
+                                        >
+                                          <div
+                                            class="p-radiobutton-icon"
+                                          />
+                                        </div>
                                       </div>
-                                    </div>
+                                    </span>
                                   </td>
                                   <td
                                     class="p-editable-column"
@@ -1545,30 +1560,35 @@ exports[`<Form /> Input render equals snapshot 1`] = `
                                         Flag2
                                       </span>
                                     </span>
-                                    <div
-                                      class="p-radiobutton p-component p-radiobutton-disabled"
-                                      id="input.selectTableWithFlags"
+                                    <span
+                                      class="w-full"
+                                      data-testid="input.selectTableWithFlags"
                                     >
                                       <div
-                                        class="p-hidden-accessible"
-                                      >
-                                        <input
-                                          disabled=""
-                                          name="input.selectTableWithFlags.flag2Filter"
-                                          tabindex="0"
-                                          type="radio"
-                                        />
-                                      </div>
-                                      <div
-                                        aria-checked="false"
-                                        class="p-radiobutton-box p-disabled"
-                                        role="radio"
+                                        class="p-radiobutton p-component p-radiobutton-disabled"
+                                        id="input.selectTableWithFlags"
                                       >
                                         <div
-                                          class="p-radiobutton-icon"
-                                        />
+                                          class="p-hidden-accessible"
+                                        >
+                                          <input
+                                            disabled=""
+                                            name="input.selectTableWithFlags.flag2Filter"
+                                            tabindex="0"
+                                            type="radio"
+                                          />
+                                        </div>
+                                        <div
+                                          aria-checked="false"
+                                          class="p-radiobutton-box p-disabled"
+                                          role="radio"
+                                        >
+                                          <div
+                                            class="p-radiobutton-icon"
+                                          />
+                                        </div>
                                       </div>
-                                    </div>
+                                    </span>
                                   </td>
                                 </tr>
                                 <tr
@@ -1619,30 +1639,35 @@ exports[`<Form /> Input render equals snapshot 1`] = `
                                         Flag1
                                       </span>
                                     </span>
-                                    <div
-                                      class="p-radiobutton p-component p-radiobutton-disabled"
-                                      id="input.selectTableWithFlags"
+                                    <span
+                                      class="w-full"
+                                      data-testid="input.selectTableWithFlags"
                                     >
                                       <div
-                                        class="p-hidden-accessible"
-                                      >
-                                        <input
-                                          disabled=""
-                                          name="input.selectTableWithFlags.flag1Filter"
-                                          tabindex="0"
-                                          type="radio"
-                                        />
-                                      </div>
-                                      <div
-                                        aria-checked="false"
-                                        class="p-radiobutton-box p-disabled"
-                                        role="radio"
+                                        class="p-radiobutton p-component p-radiobutton-disabled"
+                                        id="input.selectTableWithFlags"
                                       >
                                         <div
-                                          class="p-radiobutton-icon"
-                                        />
+                                          class="p-hidden-accessible"
+                                        >
+                                          <input
+                                            disabled=""
+                                            name="input.selectTableWithFlags.flag1Filter"
+                                            tabindex="0"
+                                            type="radio"
+                                          />
+                                        </div>
+                                        <div
+                                          aria-checked="false"
+                                          class="p-radiobutton-box p-disabled"
+                                          role="radio"
+                                        >
+                                          <div
+                                            class="p-radiobutton-icon"
+                                          />
+                                        </div>
                                       </div>
-                                    </div>
+                                    </span>
                                   </td>
                                   <td
                                     class="p-editable-column"
@@ -1657,30 +1682,35 @@ exports[`<Form /> Input render equals snapshot 1`] = `
                                         Flag2
                                       </span>
                                     </span>
-                                    <div
-                                      class="p-radiobutton p-component p-radiobutton-disabled"
-                                      id="input.selectTableWithFlags"
+                                    <span
+                                      class="w-full"
+                                      data-testid="input.selectTableWithFlags"
                                     >
                                       <div
-                                        class="p-hidden-accessible"
-                                      >
-                                        <input
-                                          disabled=""
-                                          name="input.selectTableWithFlags.flag2Filter"
-                                          tabindex="0"
-                                          type="radio"
-                                        />
-                                      </div>
-                                      <div
-                                        aria-checked="false"
-                                        class="p-radiobutton-box p-disabled"
-                                        role="radio"
+                                        class="p-radiobutton p-component p-radiobutton-disabled"
+                                        id="input.selectTableWithFlags"
                                       >
                                         <div
-                                          class="p-radiobutton-icon"
-                                        />
+                                          class="p-hidden-accessible"
+                                        >
+                                          <input
+                                            disabled=""
+                                            name="input.selectTableWithFlags.flag2Filter"
+                                            tabindex="0"
+                                            type="radio"
+                                          />
+                                        </div>
+                                        <div
+                                          aria-checked="false"
+                                          class="p-radiobutton-box p-disabled"
+                                          role="radio"
+                                        >
+                                          <div
+                                            class="p-radiobutton-icon"
+                                          />
+                                        </div>
                                       </div>
-                                    </div>
+                                    </span>
                                   </td>
                                 </tr>
                               </tbody>
@@ -3206,28 +3236,32 @@ exports[`<Form /> Table render equals snapshot 1`] = `
                                         Radio
                                       </span>
                                     </span>
-                                    <div
-                                      class="p-radiobutton p-component"
+                                    <span
+                                      class="w-full"
                                     >
                                       <div
-                                        class="p-hidden-accessible"
-                                      >
-                                        <input
-                                          id="table2[0].radio"
-                                          name="table2[0].radio"
-                                          type="radio"
-                                        />
-                                      </div>
-                                      <div
-                                        aria-checked="false"
-                                        class="p-radiobutton-box"
-                                        role="radio"
+                                        class="p-radiobutton p-component"
                                       >
                                         <div
-                                          class="p-radiobutton-icon"
-                                        />
+                                          class="p-hidden-accessible"
+                                        >
+                                          <input
+                                            id="table2[0].radio"
+                                            name="table2[0].radio"
+                                            type="radio"
+                                          />
+                                        </div>
+                                        <div
+                                          aria-checked="false"
+                                          class="p-radiobutton-box"
+                                          role="radio"
+                                        >
+                                          <div
+                                            class="p-radiobutton-icon"
+                                          />
+                                        </div>
                                       </div>
-                                    </div>
+                                    </span>
                                   </td>
                                   <td
                                     class="p-editable-column p-cell-editing"
