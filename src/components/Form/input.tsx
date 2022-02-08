@@ -177,7 +177,7 @@ export default function input(
                 return {
                     ...field.value.find(v => v[dataKey] === value[dataKey]) || {},
                     ...value
-                }
+                };
             });
             const valueKeys = value.map(item => item[dataKey]);
             const single = props.selectionMode === 'single';
