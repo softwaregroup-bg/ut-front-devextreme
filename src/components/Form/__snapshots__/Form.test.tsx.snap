@@ -1112,13 +1112,31 @@ exports[`<Form /> Input render equals snapshot 1`] = `
                                       />
                                     </div>
                                   </th>
+                                  <th
+                                    class=""
+                                    role="columnheader"
+                                  >
+                                    <div
+                                      class="p-column-header-content"
+                                    >
+                                      <span
+                                        class="p-column-title"
+                                      >
+                                        <span
+                                          data-testid="input.selectTable.isPrimaryTitle"
+                                        >
+                                          Primary
+                                        </span>
+                                      </span>
+                                    </div>
+                                  </th>
                                 </tr>
                               </thead>
                               <tbody
                                 class="p-datatable-tbody"
                               >
                                 <tr
-                                  class="p-highlight p-selectable-row"
+                                  class=""
                                   role="row"
                                 >
                                   <td
@@ -1132,13 +1150,13 @@ exports[`<Form /> Input render equals snapshot 1`] = `
                                       class="p-checkbox p-component p-checkbox-focused"
                                     >
                                       <div
-                                        aria-checked="true"
-                                        class="p-checkbox-box p-component p-highlight p-focus"
+                                        aria-checked="false"
+                                        class="p-checkbox-box p-component p-focus"
                                         role="checkbox"
                                         tabindex="0"
                                       >
                                         <span
-                                          class="p-checkbox-icon pi pi-check"
+                                          class="p-checkbox-icon"
                                         />
                                       </div>
                                     </div>
@@ -1152,9 +1170,47 @@ exports[`<Form /> Input render equals snapshot 1`] = `
                                     />
                                     One
                                   </td>
+                                  <td
+                                    class="p-editable-column"
+                                    role="cell"
+                                  >
+                                    <span
+                                      class="p-column-title"
+                                    >
+                                      <span
+                                        data-testid="input.selectTable.isPrimaryTitle"
+                                      >
+                                        Primary
+                                      </span>
+                                    </span>
+                                    <div
+                                      class="p-radiobutton p-component p-radiobutton-disabled"
+                                      id="input.selectTable"
+                                    >
+                                      <div
+                                        class="p-hidden-accessible"
+                                      >
+                                        <input
+                                          disabled=""
+                                          name="input.selectTable.isPrimaryFilter"
+                                          tabindex="0"
+                                          type="radio"
+                                        />
+                                      </div>
+                                      <div
+                                        aria-checked="false"
+                                        class="p-radiobutton-box p-disabled"
+                                        role="radio"
+                                      >
+                                        <div
+                                          class="p-radiobutton-icon"
+                                        />
+                                      </div>
+                                    </div>
+                                  </td>
                                 </tr>
                                 <tr
-                                  class="p-selectable-row p-row-odd"
+                                  class="p-row-odd"
                                   role="row"
                                 >
                                   <td
@@ -1188,9 +1244,47 @@ exports[`<Form /> Input render equals snapshot 1`] = `
                                     />
                                     Two
                                   </td>
+                                  <td
+                                    class="p-editable-column"
+                                    role="cell"
+                                  >
+                                    <span
+                                      class="p-column-title"
+                                    >
+                                      <span
+                                        data-testid="input.selectTable.isPrimaryTitle"
+                                      >
+                                        Primary
+                                      </span>
+                                    </span>
+                                    <div
+                                      class="p-radiobutton p-component p-radiobutton-disabled"
+                                      id="input.selectTable"
+                                    >
+                                      <div
+                                        class="p-hidden-accessible"
+                                      >
+                                        <input
+                                          disabled=""
+                                          name="input.selectTable.isPrimaryFilter"
+                                          tabindex="0"
+                                          type="radio"
+                                        />
+                                      </div>
+                                      <div
+                                        aria-checked="false"
+                                        class="p-radiobutton-box p-disabled"
+                                        role="radio"
+                                      >
+                                        <div
+                                          class="p-radiobutton-icon"
+                                        />
+                                      </div>
+                                    </div>
+                                  </td>
                                 </tr>
                                 <tr
-                                  class="p-selectable-row"
+                                  class=""
                                   role="row"
                                 >
                                   <td
@@ -1223,6 +1317,44 @@ exports[`<Form /> Input render equals snapshot 1`] = `
                                       class="p-column-title"
                                     />
                                     Three
+                                  </td>
+                                  <td
+                                    class="p-editable-column"
+                                    role="cell"
+                                  >
+                                    <span
+                                      class="p-column-title"
+                                    >
+                                      <span
+                                        data-testid="input.selectTable.isPrimaryTitle"
+                                      >
+                                        Primary
+                                      </span>
+                                    </span>
+                                    <div
+                                      class="p-radiobutton p-component p-radiobutton-disabled"
+                                      id="input.selectTable"
+                                    >
+                                      <div
+                                        class="p-hidden-accessible"
+                                      >
+                                        <input
+                                          disabled=""
+                                          name="input.selectTable.isPrimaryFilter"
+                                          tabindex="0"
+                                          type="radio"
+                                        />
+                                      </div>
+                                      <div
+                                        aria-checked="false"
+                                        class="p-radiobutton-box p-disabled"
+                                        role="radio"
+                                      >
+                                        <div
+                                          class="p-radiobutton-icon"
+                                        />
+                                      </div>
+                                    </div>
                                   </td>
                                 </tr>
                               </tbody>

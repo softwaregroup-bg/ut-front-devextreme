@@ -21,6 +21,7 @@ export interface PropertyEditor {
         'multiSelectTreeTable' |
         'password' |
         'radio' |
+        'select-table-radio' |
         'select' |
         'selectTable' |
         'currency' |

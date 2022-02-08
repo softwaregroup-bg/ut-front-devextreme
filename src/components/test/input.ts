@@ -83,7 +83,14 @@ const properties: Properties = {
     selectTable: {
         widget: {
             type: 'selectTable',
-            dropdown: 'select'
+            dropdown: 'select',
+            items: {
+                properties: {
+                    isPrimary: {widget: {type: 'select-table-radio'}}
+                }
+            },
+            widgets: ['isPrimary'],
+            selectionMode: 'checkbox'
         }
     },
     multiSelectTreeTable: {

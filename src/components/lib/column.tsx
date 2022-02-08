@@ -3,7 +3,7 @@ import { CheckboxTest, DropdownTest, SelectButton, RadioButton, Calendar, InputM
 import { Property } from '../types';
 import titleCase from './titleCase';
 import getType from './getType';
-import {KEY} from '../Form/const';
+import {KEY, INDEX} from '../Form/const';
 export interface TableFilter {
     filters?: {
         [name: string]: {
@@ -109,6 +109,23 @@ export default function columnProps({
                     disabled
                     // onChange={(e) => {}}
                     {...props}
+                    name={filterId}
+                />;
+            };
+            break;
+        case 'select-table-radio':
+            body = function body(rowData, {props}) {
+                return <RadioButton
+                    checked={rowData[fieldName]}
+                    disabled={!props?.selection?.filter(selected => selected[props.dataKey] === rowData[props.dataKey])?.length}
+                    onChange={event => {
+                        const index = props.value.findIndex(e => e[props.dataKey] === rowData[props.dataKey]);
+                        const data = {...rowData, [INDEX]: index};
+                        rowData[fieldName] = event.checked;
+                        return props.onRowEditComplete({data, newData: rowData});
+                    }}
+                    {...props}
+                    className=""
                     name={filterId}
                 />;
             };
