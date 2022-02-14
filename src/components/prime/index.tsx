@@ -44,8 +44,8 @@ export { Tree } from 'primereact/tree';
 export { TreeSelect } from 'primereact/treeselect';
 export { TreeTable } from 'primereact/treetable';
 
-const valueTemplate = (option, {optionLabel, name}) => {
-    const value = option?.[optionLabel || 'label'];
+const valueTemplate = (option, {optionLabel, name, value: selectedValue}) => {
+    const value = option?.[optionLabel || 'label'] || selectedValue;
     return value
         ? <span data-testid={name}>{value}</span>
         : 'empty';
