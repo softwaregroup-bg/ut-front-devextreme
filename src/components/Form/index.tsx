@@ -88,6 +88,7 @@ const Form: StyledType = ({
     cards,
     layout,
     loading,
+    methods,
     onSubmit,
     setTrigger,
     triggerNotDirty,
@@ -285,7 +286,8 @@ const Form: StyledType = ({
                     parentWatch,
                     loading,
                     getValues,
-                    counter
+                    counter,
+                    methods
                 )}
             />
         );
