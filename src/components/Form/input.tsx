@@ -136,6 +136,7 @@ export default function input(
             return <Field {...{label, error, inputClass}}>
                 <AutoCompleteTest
                     {...field}
+                    inputClassName='w-full'
                     suggestions={field.value?.suggestions}
                     value={field.value?.value}
                     completeMethod={handleComplete}
