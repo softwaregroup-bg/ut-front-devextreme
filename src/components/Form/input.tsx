@@ -126,15 +126,15 @@ export default function input(
         </>;
         case 'autocomplete': {
             const {autocomplete} = schema.widget;
-            const handleComplete = async ({query}) => (
+            const handleComplete = async({query}) => (
                 autocomplete && field.onChange({...field.value, ...await methods[autocomplete]({query})})
             );
             const handleChange = ({value}) => field.onChange({value});
             const handleSelect = ({value}) => field.onChange(value);
             const handleClear = () => field.onChange({});
-            const template = ({value}) => value
+            const template = ({value}) => value;
             return <Field {...{label, error, inputClass}}>
-                <AutoCompleteTest 
+                <AutoCompleteTest
                     {...field}
                     suggestions={field.value?.suggestions}
                     value={field.value?.value}
@@ -146,7 +146,7 @@ export default function input(
                     selectedItemTemplate={template}
                     {...props}
                 />
-            </Field>
+            </Field>;
         }
         case 'dropdown': return <Field {...{label, error, inputClass}}>
             <DropdownTest

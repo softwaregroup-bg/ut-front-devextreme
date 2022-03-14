@@ -291,7 +291,7 @@ const Form: StyledType = ({
                 )}
             />
         );
-    }, [classes, control, dropdowns, idx, loading, setValue, watch, getValues, visibleProperties]);
+    }, [classes, control, dropdowns, idx, loading, setValue, watch, getValues, visibleProperties, methods]);
 
     const InputWrapEdit = React.useCallback(
         function InputEdit({name, ...props}) {
