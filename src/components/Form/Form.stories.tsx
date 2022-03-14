@@ -26,7 +26,6 @@ export const Basic: React.FC<{}> = () =>
             dropdowns={{'tree.type': [{value: 1, label: 'Conifer'}, {value: 2, label: 'Broadleaf'}]}}
             value={{tree: {treeName: 'Oak', treeId: 1, treeType: 1}}}
             onSubmit={() => {}}
-            methods={{}}
         />
     </div>;
 
@@ -38,7 +37,6 @@ export const Input = () =>
             dropdowns={dropdowns}
             value={{input: {}}}
             onSubmit={() => {}}
-            methods={{}}
         />
     </div>;
 
@@ -92,7 +90,6 @@ export const Table = () =>
             dropdowns={dropdowns}
             value={{table: [{}]}}
             onSubmit={() => {}}
-            methods={{}}
         />
     </div>;
 
