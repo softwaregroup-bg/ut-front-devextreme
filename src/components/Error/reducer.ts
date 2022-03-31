@@ -2,11 +2,17 @@ import {LOGOUT} from '../Login/actions';
 
 import errorMessage from './errorMessage';
 
-const defaultState = {open: false, title: '', message: '', statusCode: 200, type: '', params: {}};
-
-export default (state = defaultState, action) => {
+export default (state = {open: false, title: '', message: '', type: '', params: {}}, action) => {
     if (['front.error.close', LOGOUT].includes(action.type)) {
-        return {...state, ...defaultState};
+        return {
+            ...state,
+            open: false,
+            title: '',
+            message: '',
+            statusCode: 200,
+            type: '',
+            params: {}
+        };
     }
     if (action.error) {
         if (action.suppressErrorWindow) return state;
