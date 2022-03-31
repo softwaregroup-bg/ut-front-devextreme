@@ -1,7 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
 import { useSelector, useDispatch } from 'react-redux';
-import interpolate from 'ut-function.interpolate';
 import { Dialog, Button } from '../prime';
 
 import Text from '../Text';
@@ -40,7 +39,7 @@ const Error: StyledType = ({ classes, message: errorMessage, params: errorParams
         >
             <div className={clsx(classes.errorIconWrap, classes.errorIcon)} />
             <div className={classes.errorMessageWrap}>
-                <Text params={errorParams || params} interpolate={interpolate}>{errorMessage || message}</Text>
+                <Text params={errorParams || params}>{errorMessage || message}</Text>
             </div>
             <div className={classes.errorButtonWrap}>
                 {actionButtons}
