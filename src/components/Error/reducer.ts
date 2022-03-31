@@ -2,20 +2,16 @@ import {LOGOUT} from '../Login/actions';
 
 import errorMessage from './errorMessage';
 
-export default (state = {open: false, title: '', message: '', type: ''}, action) => {
+const defaultState = {open: false, title: '', message: '', statusCode: 200, type: '', params: {}};
+
+export default (state = defaultState, action) => {
     if (['front.error.close', LOGOUT].includes(action.type)) {
-        return {
-            ...state,
-            open: false,
-            title: '',
-            message: '',
-            statusCode: 200,
-            type: ''
-        };
+        return defaultState;
     }
     if (action.error) {
         if (action.suppressErrorWindow) return state;
         const msg = (errorMessage(action.error) || errorMessage(state.message));
+        const params = action.error.params || {};
         const statusMessage = action.error.statusMessage;
         const statusCode = action.error.statusCode;
         let title = 'Error';
@@ -33,7 +29,8 @@ export default (state = {open: false, title: '', message: '', type: ''}, action)
             title: title,
             message: msg,
             statusCode,
-            type
+            type,
+            params
         };
     }
     return state;

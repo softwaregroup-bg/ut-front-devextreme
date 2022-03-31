@@ -27,7 +27,7 @@ function applyTemplate(template, params) {
     }
 }
 
-const Text: StyledType = ({ params, prefix, children }) => {
+const Text: StyledType = ({ params, prefix, children, interpolate = applyTemplate }) => {
     const {translate, language} = useContext(Context);
     if (typeof children !== 'string') return <>{children}</>;
     let template = children;
@@ -39,7 +39,7 @@ const Text: StyledType = ({ params, prefix, children }) => {
             template = children;
         }
     }
-    return <span>{applyTemplate(template, params)}</span>;
+    return <span>{interpolate(template, params)}</span>;
 };
 
 export default Text;
