@@ -6,7 +6,7 @@ const defaultState = {open: false, title: '', message: '', statusCode: 200, type
 
 export default (state = defaultState, action) => {
     if (['front.error.close', LOGOUT].includes(action.type)) {
-        return defaultState;
+        return {...state, ...defaultState};
     }
     if (action.error) {
         if (action.suppressErrorWindow) return state;
