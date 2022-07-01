@@ -34,11 +34,9 @@ const inputTypes = {
         label: 'Password',
         value: '',
         error: '',
-        validateOrder: ['isRequired', 'minLength', 'maxLength'],
+        validateOrder: ['isRequired'],
         validations: {
-            isRequired: true,
-            minLength: 3,
-            maxLength: 100
+            isRequired: true
         }
     },
     newPassword: {
@@ -47,11 +45,9 @@ const inputTypes = {
         label: 'New password',
         value: '',
         error: '',
-        validateOrder: ['isRequired', 'minLength', 'maxLength'],
+        validateOrder: ['isRequired'],
         validations: {
-            isRequired: true,
-            minLength: 3,
-            maxLength: 100
+            isRequired: true
         }
     },
     confirmPassword: {
@@ -60,11 +56,9 @@ const inputTypes = {
         label: 'Confirm password',
         value: '',
         error: '',
-        validateOrder: ['isRequired', 'minLength', 'maxLength', 'shouldMatchField'],
+        validateOrder: ['isRequired', 'shouldMatchField'],
         validations: {
             isRequired: true,
-            minLength: 3,
-            maxLength: 100,
             shouldMatchField: 'newPassword'
         }
     },
